@@ -30,7 +30,7 @@ function init() {
         wireframe: true
     });
     mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(2, 0, 0);
+    mesh.geometry.translate(2, 0, 0);
     scene.add(mesh);
 
     geometry = new THREE.CubeGeometry(1, 1, 1);
@@ -39,7 +39,7 @@ function init() {
         wireframe: true
     });
     mesh1 = new THREE.Mesh(geometry, material);
-    mesh1.position.set(0, 2, 0);
+    mesh1.geometry.translate(0, 2, 0);
     scene.add(mesh1);
 
     geometry = new THREE.CubeGeometry(1, 1, 1);
@@ -48,7 +48,7 @@ function init() {
         wireframe: true
     });
     mesh2 = new THREE.Mesh(geometry, material);
-    mesh2.position.set(0, 0, 2);
+    mesh2.geometry.translate(0, 0, 2);
     scene.add(mesh2);
 
     const axesHelper = new THREE.AxesHelper(10);
